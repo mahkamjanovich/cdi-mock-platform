@@ -1,0 +1,146 @@
+/* ===== Tema: Signal — butter & green (standart tema) =====
+   Yoqish: <html data-theme="signal" data-mode="light|dark" data-cursor="1|2|3"> */
+
+:root, [data-theme='signal'] {
+  /* shriftlar */
+  --font-body: 'Archivo', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Archivo Black', 'Archivo', system-ui, sans-serif;
+  --font-num: 'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  --font-label: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  --font-read: 'Archivo', system-ui, sans-serif;
+  --display-weight: 400; --display-track: -0.01em; --display-case: uppercase;
+  --label-case: uppercase; --label-track: .06em;
+  --btn-case: uppercase; --btn-track: .04em;
+  /* shakl */
+  --r-sm: 2px; --r-md: 2px; --r-lg: 2px; --r-xl: 2px; --r-pill: 2px; --r-btn: 0; --dot-r: 0; --bw: 2px;
+  /* harakat */
+  --dur-1: .12s; --dur-2: .24s; --dur-3: .45s;
+  --ease: cubic-bezier(.7, 0, .2, 1); --spring: cubic-bezier(.2, .9, .3, 1.15);
+  --lift: 0px; --rise: 14px;
+  /* kursor o'lchami */
+  --cur-size: 24px; --cur-stroke-w: 3; --cur-hover-scale: 1.5;
+
+  /* ranglar — light */
+  --ground: #FFEFB3; --surface: #FFF7DA; --surface-2: #FBE7A6; --paper: #FFF3C7; --field: #FFFBEA;
+  --line: #062420; --line-strong: #062420;
+  --ink: #062420; --heading: #062420; --muted: #3D4A45; --link: #013E37;
+  --brand: #013E37; --brand-hover: #062420; --on-brand: #FFEFB3; --on-brand-dim: rgba(255, 239, 179, .78);
+  --on-brand-line: rgba(255, 239, 179, .4); --on-brand-tint: rgba(255, 239, 179, .1); --on-brand-tint-2: rgba(255, 239, 179, .18); --on-brand-faint: rgba(255, 239, 179, .5);
+  --accent: #FFEFB3; --accent-hover: #FFF7DA; --on-accent: #013E37;
+  --cta: #013E37; --cta-hover: #062420; --on-cta: #FFEFB3;
+  --hl: #013E37; --on-hl: #FFEFB3; --hl-soft: rgba(1, 62, 55, .12);
+  --focus: #013E37; --ring: rgba(1, 62, 55, .18); --info: #013E37; --info-soft: rgba(1, 62, 55, .1); --flag: #B4410F;
+  --ok: #166534; --ok-soft: #DCEBC2; --on-ok: #FFF7DA;
+  --bad: #A61B1B; --bad-soft: #F8D7B8; --bad-line: #E3A08C; --on-bad: #FFF7DA; --bad-on-brand: #FFB4A6;
+  --warn: #7A4E00; --warn-soft: #F6D67A; --neutral: #46524D; --neutral-soft: #EEDFA6;
+  --overlay: rgba(1, 30, 26, .45); --glass: rgba(255, 239, 179, .82); --glass-2: rgba(255, 247, 218, .88); --glass-strong: rgba(255, 247, 218, .97);
+  --toast: rgba(1, 62, 55, .96); --on-toast: #FFEFB3; --glow-o: 0;
+  /* soyalar: Swiss uslubida yumshoq soya yo'q — faqat qattiq siljigan soya */
+  --shadow-btn: none; --shadow-cta: none; --shadow-card: none;
+  --shadow-1: 4px 4px 0 #062420; --shadow-lg: 8px 8px 0 #062420;
+  /* kursor ranglari (1-variant) */
+  --cur-fill: var(--ink); --cur-stroke: var(--ink); --cur-hover-fill: var(--brand); --cur-hover-stroke: var(--ground);
+}
+
+[data-theme='signal'][data-mode='dark'] {
+  --ground: #012A25; --surface: #013E37; --surface-2: #024A42; --paper: #01332D; --field: #012A25;
+  --line: #FFEFB3; --line-strong: #FFEFB3;
+  --ink: #FFEFB3; --heading: #FFEFB3; --muted: #C9D5C6; --link: #FFEFB3;
+  --brand: #FFEFB3; --brand-hover: #FFF7DA; --on-brand: #013E37; --on-brand-dim: rgba(1, 62, 55, .78);
+  --on-brand-line: rgba(1, 62, 55, .4); --on-brand-tint: rgba(1, 62, 55, .1); --on-brand-tint-2: rgba(1, 62, 55, .18); --on-brand-faint: rgba(1, 62, 55, .5);
+  --accent: #013E37; --accent-hover: #02574D; --on-accent: #FFEFB3;
+  --cta: #FFEFB3; --cta-hover: #FFF7DA; --on-cta: #013E37;
+  --hl: #FFEFB3; --on-hl: #013E37; --hl-soft: rgba(255, 239, 179, .14);
+  --focus: #FFEFB3; --ring: rgba(255, 239, 179, .25); --info: #FFEFB3; --info-soft: rgba(255, 239, 179, .1); --flag: #FF9E7A;
+  --ok: #9BE3A8; --ok-soft: rgba(155, 227, 168, .14); --on-ok: #012A25;
+  --bad: #FF9E8A; --bad-soft: rgba(255, 158, 138, .14); --bad-line: rgba(255, 158, 138, .5); --on-bad: #012A25; --bad-on-brand: #A61B1B;
+  --warn: #F6D77A; --warn-soft: rgba(246, 215, 122, .14); --neutral: #C9D5C6; --neutral-soft: rgba(255, 239, 179, .08);
+  --overlay: rgba(0, 10, 8, .6); --glass: rgba(1, 42, 37, .82); --glass-2: rgba(1, 62, 55, .88); --glass-strong: rgba(1, 62, 55, .97);
+  --toast: rgba(255, 239, 179, .96); --on-toast: #013E37;
+  --shadow-1: 4px 4px 0 #FFEFB3; --shadow-lg: 8px 8px 0 rgba(0, 0, 0, .45);
+}
+
+/* Kursor variantlari: 1 — to'la (standart), 2 — kontur, 3 — yashil + butter hoshiya */
+[data-theme='signal'][data-cursor='2'] { --cur-fill: transparent; --cur-stroke: var(--link); --cur-hover-fill: var(--link); --cur-hover-stroke: var(--link); }
+[data-theme='signal'][data-cursor='3'] { --cur-fill: var(--brand); --cur-stroke: var(--ground); --cur-hover-fill: var(--ink); --cur-hover-stroke: var(--ground); }
+
+/* ===== Imzo: Swiss setka — kirish sahifasi =====
+   Chap menyu bloki (aside) "display: contents" bo'ladi va uning bolalari umumiy setkaga joylanadi:
+   yuqorida logo + qalin chiziq, chapda katta sarlavha, o'ngda yashil kirish bloki, pastda bo'limlar jadvali. */
+[data-theme='signal'] .auth {
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 420px); grid-template-rows: auto 1fr auto;
+  column-gap: 56px; padding: 0 48px 40px; background: var(--ground);
+}
+[data-theme='signal'] .auth-brand { display: contents; color: var(--ink); }
+[data-theme='signal'] .auth-brand .glow { display: none; }
+[data-theme='signal'] .auth-brand .logo {
+  grid-column: 1 / -1; grid-row: 1; padding: 26px 0 22px; border-bottom: 3px solid var(--ink);
+  font-family: var(--font-label); font-size: 14px; text-transform: uppercase; letter-spacing: .08em;
+}
+[data-theme='signal'] .auth .logo .mark-bar { fill: var(--hl); }
+[data-theme='signal'] .auth-brand .reveal { grid-column: 1; grid-row: 2; align-self: start; padding-top: 56px; }
+[data-theme='signal'] .auth-brand h1 { color: var(--ink); font-size: clamp(44px, 7.4vw, 112px); line-height: .88; letter-spacing: -0.035em; max-width: 9.5ch; }
+[data-theme='signal'] .auth-brand .lead { color: var(--muted); opacity: 1; font-size: 19px; max-width: 34ch; margin-top: 28px; }
+[data-theme='signal'] .sections-strip { grid-column: 1 / -1; grid-row: 3; gap: 0; border-top: 3px solid var(--ink); margin-top: 48px; }
+[data-theme='signal'] .sections-strip li { background: none; border-radius: 0 !important; padding: 20px 20px 4px; border-left: 1px solid var(--line-strong); }
+[data-theme='signal'] .sections-strip li:first-child { border-left: none; padding-left: 0; }
+[data-theme='signal'] .sections-strip li::before { content: '0' counter(sec); display: block; font-family: var(--font-label); font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+[data-theme='signal'] .sections-strip li:hover { background: none; }
+[data-theme='signal'] .sections-strip .eq { display: none; }
+[data-theme='signal'] .sections-strip b { font-family: var(--font-display); font-size: clamp(20px, 2.3vw, 32px); text-transform: uppercase; letter-spacing: -0.01em; line-height: 1.1; }
+[data-theme='signal'] .sections-strip span { font-family: var(--font-label); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); opacity: 1; }
+
+[data-theme='signal'] .auth-form {
+  grid-column: 2; grid-row: 2; align-self: start; margin-top: 56px; padding: 32px; display: block;
+  background: var(--brand); color: var(--on-brand); animation: wipe .7s var(--ease) both .15s;
+}
+[data-theme='signal'] .auth-form form { max-width: none; }
+[data-theme='signal'] .auth-form h2 { color: var(--on-brand); font-size: 30px; text-transform: uppercase; letter-spacing: -0.01em; }
+[data-theme='signal'] .auth-form .sub, [data-theme='signal'] .auth-form .foot, [data-theme='signal'] .auth-form label { color: var(--on-brand); opacity: .88; }
+[data-theme='signal'] .auth-form .err { color: var(--on-brand); background: var(--bad); padding: 8px 12px; }
+[data-theme='signal'] .auth-form .pin .cell { background: var(--on-brand); color: var(--brand); border-color: var(--on-brand); }
+[data-theme='signal'] .auth-form .pin .cell.cur { background: transparent; border-color: var(--on-brand); }
+[data-theme='signal'] .auth-form .pin .cell.cur::after { background: var(--on-brand); width: 3px; }
+[data-theme='signal'] .auth-form .pin.bad .cell { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
+[data-theme='signal'] .auth-form button[type='submit'] { background: var(--on-brand); color: var(--brand); border-color: var(--on-brand); text-align: left; }
+[data-theme='signal'] .auth-form button[type='submit']:hover { background: var(--ground); border-color: var(--ground); color: var(--ink); }
+[data-theme='signal'] .auth-form input:not(.pin input) { background: var(--on-brand); color: var(--brand); border-color: var(--on-brand); }
+[data-theme='signal'] .auth-form :is(.lang-sw, .mode-sw) { background: var(--on-brand-tint); box-shadow: inset 0 0 0 1px var(--on-brand-line); }
+[data-theme='signal'] .auth-form .mode-sw button { color: var(--on-brand); }
+[data-theme='signal'] .auth-form .mode-sw button:hover { background: var(--on-brand-tint-2); }
+[data-theme='signal'] .auth-form .mode-sw button.on { background: var(--on-brand); color: var(--brand); }
+[data-theme='signal'] .auth-form .lang-sw button { color: var(--on-brand) !important; }
+[data-theme='signal'] .auth-form .lang-sw button.on { background: var(--on-brand) !important; color: var(--brand) !important; }
+
+/* Fon butun ekranni egallaydi: yon menyu va yuqori panellar ham sahifa fonida, matn/kontur esa qarama-qarshi rangda.
+   Yon menyu asosiy oynadan qalin chiziq bilan ajraladi (light: to'q, dark: och). */
+[data-theme='signal'] :is(.side, .topbar, .exam-top) {
+  background: var(--ground); color: var(--ink);
+  --on-brand: var(--ink); --on-brand-dim: var(--muted); --on-brand-faint: var(--muted); --on-brand-line: var(--line);
+  --on-brand-tint: var(--hl-soft); --on-brand-tint-2: var(--ring);
+  --accent: var(--brand); --accent-hover: var(--brand-hover); --on-accent: var(--ground); --bad-on-brand: var(--bad);
+}
+[data-theme='signal'] .side { border-right: 3px solid var(--line); }
+[data-theme='signal'] :is(.topbar, .exam-top) { border-bottom: 3px solid var(--line); }
+[data-theme='signal'] .topbar .mode-sw button.on { color: var(--ground); }
+
+/* Aniq konturlar: admin paneldagi maydonlar va segment tugmalar ham chiziq bilan ajraladi */
+[data-theme='signal'] :is(.adm, .ov) :is(input, select, textarea):not([type='file']):not(.pal-in input) { border-color: var(--line); }
+[data-theme='signal'] .seg { box-shadow: inset 0 0 0 1.5px var(--line); }
+[data-theme='signal'] .sec-avg i, [data-theme='signal'] .meter i { box-shadow: inset 0 0 0 1px var(--line); }
+
+/* Hover: keskin inversiya, chiziqlar qalinlashadi */
+[data-theme='signal'] .linklike:hover { text-decoration-thickness: 3px; }
+[data-theme='signal'] tr.click:hover td:first-child { transform: none; }
+[data-theme='signal'] .sec.live:hover .ico, [data-theme='signal'] .sec.live:hover { transform: none; }
+[data-theme='signal'] .flow-card { box-shadow: none; }
+
+@media (max-width: 900px) {
+  [data-theme='signal'] .auth { grid-template-columns: 1fr; grid-template-rows: auto; padding: 0 20px 32px; column-gap: 0; }
+  [data-theme='signal'] .auth-brand .logo { grid-column: 1; }
+  [data-theme='signal'] .auth-brand .reveal { grid-row: 2; padding-top: 32px; }
+  [data-theme='signal'] .auth-form { grid-column: 1; grid-row: 3; margin-top: 28px; padding: 24px 20px; }
+  [data-theme='signal'] .sections-strip { grid-column: 1; grid-row: 4; grid-template-columns: repeat(2, 1fr); margin-top: 32px; }
+  [data-theme='signal'] .sections-strip li:nth-child(3) { border-left: none; padding-left: 0; }
+  [data-theme='signal'] .sections-strip li { padding-bottom: 16px; }
+}

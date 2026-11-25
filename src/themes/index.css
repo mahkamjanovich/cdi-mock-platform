@@ -1,0 +1,4 @@
+/* Temalar ro'yxati. Yangi tema: src/themes/<nom>.css faylini yarating va shu yerga bitta qator qo'shing.
+   Faol tema admin panel → Sozlamalar → Dizayn bo'limida tanlanadi (yangi temani src/design.js dagi THEMES ga ham qo'shing). */
+@import './signal.css';
+@import './ivory.css';
